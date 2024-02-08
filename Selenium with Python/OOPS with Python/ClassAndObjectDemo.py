@@ -23,30 +23,30 @@ class Calculator:
             return self.op1 // self.op2
 
     def percentage(self):
-        if self.op1 < self.op2:
+        if self.op1 <= self.op2:
             return (self.op1 / self.op2) * Calculator.num
 
 
-operator = ['+', '-', '*', '/', 'per']
-inp1, opr, inp2 = input("Enter two number separating spaces: ").split(" ")
-c = Calculator(int(inp1), int(inp2))
-
-if opr == operator[0]:
-    result = c.sum()
-
-elif opr == operator[1]:
-    result = c.minus()
-
-elif opr == operator[2]:
-    result = c.product()
-
-elif opr == operator[3]:
-    result = c.divide()
-
-elif opr == operator[4]:
-    result = c.percentage()
-
-else:
-    print("Undefined operator!!")
-
-print(str(inp1) + opr + str(inp2) + "=" + str(result))
+# operator = ['+', '-', '*', '/', 'per']
+# inp1, opr, inp2 = input("Enter two number separating spaces: ").split(" ")
+# c = Calculator(int(inp1), int(inp2))
+#
+# if opr == operator[0]:
+#     result = c.sum()
+#
+# elif opr == operator[1]:
+#     result = c.minus()
+#
+# elif opr == operator[2]:
+#     result = c.product()
+#
+# elif opr == operator[3]:
+#     result = c.divide()
+#
+# elif opr == operator[4]:
+#     result = c.percentage()
+#
+# else:
+#     print("Undefined operator!!")
+#
+# print(str(inp1) + opr + str(inp2) + "=" + str(result))
