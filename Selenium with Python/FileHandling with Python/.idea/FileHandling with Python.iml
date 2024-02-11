@@ -6,5 +6,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ExceptionHandling" />
+    <orderEntry type="module" module-name="Selenium with Python" />
   </component>
 </module>
