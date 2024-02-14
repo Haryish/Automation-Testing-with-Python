@@ -14,4 +14,31 @@ Button:
  Xpth: /html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[3]/button[1]
 
 Username : Admin
-Password : admin123
+Password :
+
+
+XPath: //tagname[@attribute='value']  -> //input[@type='submit']
+
+.text : a property to get the element and set as string
+
+CSS selector: tagname[attribute='value], # -> id ; . -> class
+
+Incase you find any element and you tried to locate to specific element, (tagname[attribute='value'])[<index>]
+
+assert <string enclosed with quotation> in variable_that_being_set_as_expected
+
+Linkex test locator - By.LINK_TEXT is used to locate to the specific linked text under <a> tag
+
+alternatively for element without linked text use XPath, By.XPATH, "tagname[text='<value>']"
+------------------------------------------------------------------------------------------------------------------
+https://rahulshettyacademy.com/angularpractice/
+
+Name: (//input[@name='name'])[1]
+email: input[name='email']
+CheckBox: input[id='exampleCheck1'] | #exampleCheck1
+
+
+
+
+https://rahulshettyacademy.com/client/auth/login
+g

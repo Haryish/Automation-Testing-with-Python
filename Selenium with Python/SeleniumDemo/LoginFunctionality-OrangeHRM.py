@@ -17,19 +17,15 @@ driver.implicitly_wait(10)
 driver.find_element(By.NAME, "username").send_keys("Admin")
 
 driver.implicitly_wait(5)
-driver.find_element(By.XPATH,
-                    "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[2]/div[1]/div["
-                    "2]/input[1]").send_keys(
-    "admin123")
+driver.find_element(By.XPATH,"/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[2]/div[1]/div[2]/input[1]").send_keys("admin123")
 
 driver.implicitly_wait(5)
-driver.find_element(By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div["
-                              "3]/button[1]").click()
+driver.find_element(By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[3]/button[1]").click()
 
 
 driver.implicitly_wait(10)
 
 print(driver.title)
-driver.implicitly_wait(20)
+driver.implicitly_wait(400)
 
 driver.close()
