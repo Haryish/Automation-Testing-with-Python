@@ -6,6 +6,9 @@ from docx import Document
 
 from selenium import webdriver
 
+'''
+ChatGPT Reference: https://chat.openai.com/c/e4698502-65ce-4d1a-b289-91757e816442
+'''
 
 # # from selenium.common import WebDriverException
 # from selenium.webdriver.chrome.service import Service
