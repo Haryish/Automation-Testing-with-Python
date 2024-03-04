@@ -62,4 +62,4 @@ if __name__ == "__main__":
 
     # Paste screenshots into Word document
     screenshot_filenames = [f"quote-section-{i+1}.png" for i in range(num_screenshots)]
-    paste_into_word(screenshot_filenames, "test-evidence/webpage_screenshots.doc")
+    paste_into_word(screenshot_filenames, "../test-evidence/webpage_screenshots.doc")
