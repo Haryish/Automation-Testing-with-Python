@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 chrome_option = webdriver.ChromeOptions()
 chrome_option.add_argument("--start-maximized")
 # chromeoption arguments: {'--start-maximized', 'headless' , '--ignore-certificate-error'}
+#visit https://www.programcreek.com/python/example/100025/selenium.webdriver.ChromeOption for documentation
 
 # Chrome Drive - ChromeBrowser
 serviceObj = Service()  # selenium webservice Manager / seleniumManager
