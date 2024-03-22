@@ -5,13 +5,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
+chrome_option = webdriver.ChromeOptions()
+chrome_option.add_argument("--start-maximized")
+# chromeoption arguments: {'--start-maximized', 'headless' , '--ignore-certificate-error'}
+
 # Chrome Drive - ChromeBrowser
 serviceObj = Service()  # selenium webservice Manager / seleniumManager
-driver = webdriver.Chrome(service=serviceObj)
-
-chrome_option = webdriver.ChromeOptions()
-
-chrome_option.add_argument("--start-maximized")
+driver = webdriver.Chrome(service=serviceObj, options=chrome_option)
 
 url1 = "https://rahulshettyacademy.com/seleniumPractise/#/"
 
