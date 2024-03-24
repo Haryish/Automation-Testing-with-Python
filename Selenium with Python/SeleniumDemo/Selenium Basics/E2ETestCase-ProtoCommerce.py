@@ -4,6 +4,8 @@ from selenium import webdriver
 # from selenium.common import WebDriverException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 chrome_option = webdriver.ChromeOptions()
 chrome_option.add_argument("--start-maximized")
@@ -55,13 +57,16 @@ print("Test case 3: Checkout page Exist - Passed")
 
 # Test case 4: Place the order and verify the success message
 driver.find_element(By.XPATH, "//input[@id='country']").send_keys("Ind")
-suggestion, j = driver.find_elements(By.XPATH, "//div[@class='suggestions']//li"), 1
-for country in suggestion:
-    if country.find_element(By.XPATH, f"(//a)[{j}]").text == 'India':
-        country.click()
-    else:
-        j += 1
-time.sleep(5)
+wait = WebDriverWait(driver, 10)
+wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
+driver.find_element(By.LINK_TEXT, "India").click()
+# suggestion, j = driver.find_elements(By.XPATH, "//div[@class='suggestions']//li"), 1
+# for country in suggestion:
+#     if country.find_element(By.XPATH, f"(//a)[{j}]").text == 'India':
+#         country.click()
+#     else:
+#         j += 1
+# time.sleep(5)
 driver.find_element(By.CSS_SELECTOR, "label[for='checkbox2']").click()
 driver.find_element(By.XPATH, "//input[@value='Purchase']").click()
 time.sleep(3)
