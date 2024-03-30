@@ -3,18 +3,18 @@ import pytest
 
 @pytest.mark.smoke
 def buildCheck_ios():
-    print("Build is ready to test")
+    print("Test Case 0.2: done")
 
 
 @pytest.mark.skip
-def testCaseThree():
-    print("Test Case 3: Executed")
+def testCase_2_1():
+    print("Test Case 2.1: Done")
 
 
-def testCaseFour():
-    print("Test Case 4: Executed")
+def testCase_2_2():
+    print("Test Case 2.2: Done")
 
 
 @pytest.mark.xfail
-def testCaseFive():
-    print("Test Case 5: Executed")
+def testCase_2_3():
+    print("Test Case 2.3: Done")
