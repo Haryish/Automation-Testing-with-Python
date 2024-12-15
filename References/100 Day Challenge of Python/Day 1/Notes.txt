@@ -6,3 +6,5 @@ Briston
 What's your pet name?
 Rabbit
 Your band name could be <Briston><Rabbit>
+
+https://www.geeksforgeeks.org/python-interview-questions/

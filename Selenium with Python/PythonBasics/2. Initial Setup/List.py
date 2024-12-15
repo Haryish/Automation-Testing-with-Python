@@ -4,7 +4,6 @@
 # you can use import as above, but while calling the class, it will utilize all the print statements available there
 # b, c, d, e = fa.b, fa.c, fa.d, fa.e
 
-# List, Set, Tuples
 # visit
 
 values = [1, 2, "a", 4, 5.0]
@@ -35,3 +34,5 @@ print("After Deletion of '2'nd element: Value = " + str(values))
 values.pop()
 values.remove(5.0)
 print("After Deletion of Last two values: Value = {0}".format(str(values)))
+
+
