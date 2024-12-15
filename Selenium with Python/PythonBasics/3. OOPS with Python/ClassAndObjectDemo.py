@@ -27,10 +27,10 @@ class Calculator:
             return (self.op1 / self.op2) * Calculator.num
 
 
-# operator = ['+', '-', '*', '/', 'per']
-# inp1, opr, inp2 = input("Enter two number separating spaces: ").split(" ")
-# c = Calculator(int(inp1), int(inp2))
-#
+operator = ['+', '-', '*', '/', 'per']
+inp1, opr, inp2 = input("Enter two number separating spaces: ").split(" ")
+c = Calculator(int(inp1), int(inp2))
+
 # if opr == operator[0]:
 #     result = c.sum()
 #
@@ -48,5 +48,13 @@ class Calculator:
 #
 # else:
 #     print("Undefined operator!!")
-#
-# print(str(inp1) + opr + str(inp2) + "=" + str(result))
+
+match opr:
+    case '+': result = c.sum()
+    case '-': result = c.minus()
+    case '*': result = c.product()
+    case '/': result = c.divide()
+    case _: print("Undefined operator!!")
+
+
+print(str(inp1) + opr + str(inp2) + "=" + str(result))

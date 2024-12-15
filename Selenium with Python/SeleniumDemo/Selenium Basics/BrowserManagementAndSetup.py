@@ -6,18 +6,23 @@ from selenium.webdriver.chrome.service import Service
 browser = input("Input the Browser for execution: ")
 serviceObj = Service()  # selenium webservice Manager / seleniumManager
 
+# try:
+#     if browser == 'Chrome':
+#         driver = webdriver.Chrome(service=serviceObj)
+#     elif browser == 'Firefox':
+#         driver = webdriver.Firefox(service=serviceObj)
+#
+#     elif browser == 'Edge':
+#         driver = webdriver.Edge(service=serviceObj)
+#     else:
+#         print("invalid browser name")
+
 try:
-    if browser == 'Chrome':
-        driver = webdriver.Chrome(service=serviceObj)
-
-    elif browser == 'Firefox':
-        driver = webdriver.Firefox(service=serviceObj)
-
-    elif browser == 'Edge':
-        driver = webdriver.Edge(service=serviceObj)
-    else:
-        print("invalid browser name")
-
+    match browser.casefold():
+        case "chrome": driver = webdriver.Chrome(service=serviceObj)
+        case "firefox": driver = webdriver.Firefox(service=serviceObj)
+        case "edge": driver = webdriver.Edge(service=serviceObj)
+        case _: print("invalid browser name")
 except WebDriverException:
     raise "WebDriver/Browser is not set"
 finally:
