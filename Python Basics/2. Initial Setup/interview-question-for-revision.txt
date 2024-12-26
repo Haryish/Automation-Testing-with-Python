@@ -1,0 +1,114 @@
+1. String Manipulation
+Q: Write a Python script to verify if a given string is a palindrome.
+(Example Input: "madam" → Output: True)
+Follow-up: How would you handle case sensitivity in your palindrome check?
+
+What They’re Testing:
+Knowledge of string slicing.
+Handling string transformations like lower() for case-insensitivity.
+---------
+2. String and List Operations
+Q: Suppose you are given a log file as a single string with multiple lines. Write a Python function to extract all error messages that contain the word "ERROR" and return them as a list.
+(Example Input: "INFO: All good\nERROR: Disk full\nERROR: Network down" → Output: ["ERROR: Disk full", "ERROR: Network down"])
+
+What They’re Testing:
+Proficiency in split() and filtering data using Python's list operations.
+------
+3. Tuples in Test Data
+Q: How would you use tuples to store test cases where each tuple represents an input-output pair for a function? Write a script that takes a list of these tuples and checks if a function produces the correct output for each input.
+
+What They’re Testing:
+Your understanding of tuples as immutable collections.
+Use of tuples for lightweight test data organization.
+-------
+4. Sets for Unique Data
+Q: During test execution, you are logging which test cases are executed. Write a Python function that takes a list of test case names (with possible duplicates) and returns a set of unique test case names.
+
+Follow-up: How does the performance of a set-based solution compare to a list-based one for this task?
+
+What They’re Testing:
+
+Ability to apply sets for uniqueness.
+Awareness of the performance benefits of sets for membership tests.
+----
+5. Dictionaries for Test Case Mapping
+Q: You need to map test cases to their execution statuses ("Pass", "Fail", "Skipped") in a dictionary. Write a script that updates the status of a specific test case when its name is provided.
+
+Example Input:
+
+test_cases = {"test_login": "Pass", "test_payment": "Fail", "test_search": "Skipped"}
+# Update "test_payment" to "Pass"
+Follow-up: How would you use get() to handle non-existent test case names gracefully?
+
+What They’re Testing:
+
+Proficiency in dictionary operations like updating and retrieving values.
+-----
+6. Combining Data Types
+Q: A test suite generates results in the form of tuples like ("test_login", "Pass"). Write a function that takes a list of such tuples and creates a dictionary where the test case names are the keys and their results are the values.
+
+Example Input:
+
+[("test_login", "Pass"), ("test_payment", "Fail"), ("test_search", "Skipped")]
+Output:
+
+{"test_login": "Pass", "test_payment": "Fail", "test_search": "Skipped"}
+What They’re Testing:
+
+Ability to transform and aggregate data using dictionaries and tuples.
+------
+7. Data Validation Using Sets
+Q: Assume that a list of test case names is read from a configuration file and another list is obtained from the automation test results. Write a Python function to find test cases that are missing in the results using sets.
+
+Example Input:
+
+expected_tests = {"test_login", "test_payment", "test_search"}
+executed_tests = {"test_payment", "test_search"}
+Output:
+
+{"test_login"}
+What They’re Testing:
+
+Proficiency in set operations like difference (- or .difference()).
+-----
+8. Dictionary Comprehension
+Q: Write a Python script using dictionary comprehension to count the occurrence of each character in a given string.
+(Example Input: "automation" → Output: {'a': 2, 'u': 1, 't': 2, 'o': 2, 'm': 1, 'i': 1, 'n': 1})
+
+Follow-up: How would you modify the script to ignore spaces and make it case-insensitive?
+
+What They’re Testing:
+
+Understanding of dictionary comprehension and its application in data aggregation.
+-----
+9. Automation Script Design
+Q: Describe how you would use dictionaries to store test environment configurations (like browser type, OS, and screen resolution). Write a script to simulate fetching a specific configuration by name.
+
+Example Input:
+
+configs = {
+    "env1": {"browser": "Chrome", "OS": "Windows", "resolution": "1920x1080"},
+    "env2": {"browser": "Firefox", "OS": "Linux", "resolution": "1366x768"}
+}
+# Fetch details for "env1"
+What They’re Testing:
+
+Your approach to organizing and accessing nested dictionaries.
+-------
+10. Error Handling in Automation
+Q: Write a Python script to simulate running test cases stored in a dictionary and return the results. Handle the case where a key (test case) doesn’t exist gracefully using a try-except block or get().
+
+Example Input:
+
+test_cases = {"test_login": "Pass", "test_payment": "Fail"}
+# Simulate fetching "test_search"
+What They’re Testing:
+
+Error handling and robustness when working with dictionaries.
+
+--------
+Bonus Tips
+For each coding problem, explain your thought process clearly.
+Mention where these concepts would apply in automation testing scenarios (e.g., log analysis, configuration management, test case tracking).
+Demonstrate how these concepts integrate into testing frameworks like Selenium or pytest.
+Let me know if you want detailed solutions for any of these! 😊
