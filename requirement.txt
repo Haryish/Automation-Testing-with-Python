@@ -1,0 +1,49 @@
+# General Testing with PyTest
+pytest==7.4.0
+pytest-html==3.2.0
+pytest-cov==4.1.0
+pytest-xdist==3.3.0
+pytest-mock==3.11.1
+
+# Selenium Basics
+selenium==4.21.0
+webdriver-manager==4.3.0
+pytest-selenium==3.0.0
+
+# Robot Framework and Related Libraries
+robotframework==7.0.0
+robotframework-seleniumlibrary==6.4.0
+robotframework-requests==0.9.4
+robotframework-pabot==3.2.0
+robotframework-datadriver==1.5.0
+
+# API Testing
+requests==2.31.0
+pytest-requests==0.1.0
+
+# Mocking and Test Utilities
+mock==5.0.0
+responses==0.23.0
+freezegun==1.2.0
+
+# Data and Utility Modules
+pandas==2.1.1
+openpyxl==3.1.2
+faker==19.5.0
+jsonschema==4.19.0
+xmltodict==0.13.0
+
+# Logging and Reporting
+allure-pytest==3.0.0
+loguru==0.7.0
+
+# Performance Testing
+locust==3.0.0
+
+# CI/CD Integration
+pytest-junitxml==3.0.0
+
+# Optional Development and Debugging Tools
+ipdb==0.14.0
+pytest-rerunfailures==11.0
+pytest-randomly==4.0.0
