@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-27T20:55:16.121038" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Demonstration" source="c:\Users\Lenova\OneDrive\Desktop\Projects\Testing Projects\Python-Pytest-Robot\Automation-Testing-with-Python\3. Robot Framework\test_demonstration.robot">
+<test id="s1-t1" name="Validate the stability of web application" line="9">
+<kw name="open the url on the browser">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-12-27T20:55:16.983107" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-12-27T20:55:16.982108" elapsed="19.451512"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-27T20:55:36.434620" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-27T20:55:36.433620" elapsed="2.142970"/>
+</kw>
+<status status="PASS" start="2024-12-27T20:55:16.979109" elapsed="21.598481"/>
+</kw>
+<kw name="check if the webapp opens successfully">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-27T20:55:38.602593" elapsed="0.068006"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-27T20:55:38.725600" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
+<arg>${TITLE_EXPECTED}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-27T20:55:38.671599" elapsed="0.054001"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-27T20:55:38.726602" elapsed="2.891699"/>
+</kw>
+<status status="PASS" start="2024-12-27T20:55:38.600591" elapsed="3.018709"/>
+</kw>
+<status status="PASS" start="2024-12-27T20:55:16.977108" elapsed="24.643194"/>
+</test>
+<doc>To verify stable opening of webapp</doc>
+<status status="PASS" start="2024-12-27T20:55:16.173041" elapsed="25.449260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Demonstration">Test Demonstration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

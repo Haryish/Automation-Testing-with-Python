@@ -7,14 +7,14 @@ pytest-mock==3.11.1
 
 # Selenium Basics
 selenium==4.21.0
-webdriver-manager==4.3.0
+webdriver-manager==4.0.2
 pytest-selenium==3.0.0
 
 # Robot Framework and Related Libraries
 robotframework==7.0.0
-robotframework-seleniumlibrary==6.4.0
+robotframework-seleniumlibrary==6.6.1
 robotframework-requests==0.9.4
-robotframework-pabot==3.2.0
+robotframework-pabot==3.1.0
 robotframework-datadriver==1.5.0
 
 # API Testing
@@ -34,14 +34,11 @@ jsonschema==4.19.0
 xmltodict==0.13.0
 
 # Logging and Reporting
-allure-pytest==3.0.0
+allure-pytest==2.13.5
 loguru==0.7.0
 
-# Performance Testing
-locust==3.0.0
-
 # CI/CD Integration
-pytest-junitxml==3.0.0
+pytest-junitxml==3.8
 
 # Optional Development and Debugging Tools
 ipdb==0.14.0
