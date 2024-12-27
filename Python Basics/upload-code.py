@@ -1,20 +1,34 @@
-def timeConversion(s):
-    # Extract the period (AM/PM)
-    period_ind = s[-2:]
-    # Extract hour, minute, and second, excluding the last 2 characters (AM/PM)
-    hour, minute, second = map(int, s[:-2].split(":"))
+#!/bin/python3
 
-    # Convert hour based on the period
-    if period_ind == "PM" and hour != 12:  # Convert PM times except 12 PM
-        hour += 12
-    elif period_ind == "AM" and hour == 12:  # Convert 12 AM to 0
-        hour = 0
+import math
+import os
+import random
+import re
+import sys
 
-    # Return the military time in "HH:MM:SS" format
-    return f"{hour:02}:{minute:02}:{second:02}"
+#
+# Complete the 'diagonalDifference' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+#
 
+def diagonalDifference(arr):
+    # Write your code here
+    d1,d2,c = 0,0,0
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if i==j:
+                d1 += arr[i][j]
+                d2 += arr[i][-(j+1)]
+    return abs(d1-d2)
+    
+    
 
-if __name__ == "__main__":
-    s = input()  # Take input in the format "hh:mm:ssAM/PM"
-    result = timeConversion(s)
-    print(result)  # Output the converted time
+if __name__ == '__main__':
+    n = int(input().strip())
+    arr = []
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+    result = diagonalDifference(arr)
+    print(result)
