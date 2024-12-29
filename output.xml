@@ -1,54 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-27T20:55:16.121038" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Demonstration" source="c:\Users\Lenova\OneDrive\Desktop\Projects\Testing Projects\Python-Pytest-Robot\Automation-Testing-with-Python\3. Robot Framework\test_demonstration.robot">
-<test id="s1-t1" name="Validate the stability of web application" line="9">
-<kw name="open the url on the browser">
-<kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-12-27T20:55:16.983107" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<arg>Chrome</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-12-27T20:55:16.982108" elapsed="19.451512"/>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2024-12-29T19:27:32.630269" rpa="false" schemaversion="5">
+<suite id="s1" name="test basicWebScraping" source="c:\Users\Lenova\OneDrive\Desktop\Projects\Testing Projects\Python-Pytest-Robot\Automation-Testing-with-Python\3. Robot Framework\test_basicWebScraping.robot">
+<test id="s1-t1" name="[Tags]" line="15">
+<kw name="Positive Path">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-29T19:27:33.356438" level="INFO">Executing Test Cases for Positive path scenarios</msg>
+<arg>Executing Test Cases for Positive path scenarios</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-29T19:27:33.355437" elapsed="0.007001"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-12-27T20:55:36.434620" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-12-27T20:55:36.433620" elapsed="2.142970"/>
-</kw>
-<status status="PASS" start="2024-12-27T20:55:16.979109" elapsed="21.598481"/>
-</kw>
-<kw name="check if the webapp opens successfully">
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-27T20:55:38.602593" elapsed="0.068006"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-12-27T20:55:38.725600" level="INFO">Page title is 'LoginPage Practise | Rahul Shetty Academy'.</msg>
-<arg>${TITLE_EXPECTED}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-12-27T20:55:38.671599" elapsed="0.054001"/>
+<status status="PASS" start="2024-12-29T19:27:33.351438" elapsed="0.011999"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-27T20:55:38.726602" elapsed="2.891699"/>
+<status status="PASS" start="2024-12-29T19:27:33.366439" elapsed="0.001000"/>
 </kw>
-<status status="PASS" start="2024-12-27T20:55:38.600591" elapsed="3.018709"/>
-</kw>
-<status status="PASS" start="2024-12-27T20:55:16.977108" elapsed="24.643194"/>
+<status status="PASS" start="2024-12-29T19:27:33.348439" elapsed="0.023360"/>
 </test>
-<doc>To verify stable opening of webapp</doc>
-<status status="PASS" start="2024-12-27T20:55:16.173041" elapsed="25.449260"/>
+<test id="s1-t2" name="Test if we can initialize browser and render to url" line="16">
+<kw name="Open AutomationPractice" owner="page_actions">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:33.385257" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/AutomationPractice/'.</msg>
+<arg>https://rahulshettyacademy.com/AutomationPractice/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T19:27:33.384258" elapsed="6.248500"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:33.382261" elapsed="6.251498"/>
+</kw>
+<kw name="Check if the title matches the same">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-29T19:27:39.641448" elapsed="0.741693"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T19:27:45.385715" level="INFO">Slept 5 seconds.</msg>
+<arg>${load_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T19:27:40.384140" elapsed="5.001575"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:45.422720" level="INFO">Page title is 'Practice Page'.</msg>
+<arg>Practice Page</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-29T19:27:45.386716" elapsed="0.036004"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:39.639758" elapsed="5.783962"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T19:27:45.432721" elapsed="3.490119"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:33.375798" elapsed="15.548042"/>
+</test>
+<test id="s1-t3" name="[Tags]" line="20">
+<kw name="Positive Path">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-29T19:27:48.930842" level="INFO">Executing Test Cases for Positive path scenarios</msg>
+<arg>Executing Test Cases for Positive path scenarios</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-29T19:27:48.929843" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:48.928841" elapsed="0.003002"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T19:27:48.932841" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:48.926842" elapsed="0.007000"/>
+</test>
+<test id="s1-t4" name="Test that we can able to login using text fields" line="21">
+<kw name="Open LoginpagePractise" owner="page_actions">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:48.939843" level="INFO">Opening browser 'chrome' to base url 'https://rahulshettyacademy.com/loginpagePractise/'.</msg>
+<arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T19:27:48.939843" elapsed="4.102599"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:48.938843" elapsed="4.103599"/>
+</kw>
+<kw name="Enter the text on username field">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:53.050444" level="INFO">Typing text 'rahulshettyacademy' into text field '//input[@id='username']'.</msg>
+<arg>//input[@id='username']</arg>
+<arg>rahulshettyacademy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:53.048446" elapsed="0.243897"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:53.044443" elapsed="0.248869"/>
+</kw>
+<kw name="Enter the password field">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:53.305370" level="INFO">Typing password into text field 'css:#password'.</msg>
+<msg time="2024-12-29T19:27:53.470435" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:#password</arg>
+<arg>learning</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:53.305370" elapsed="0.470399"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:53.304364" elapsed="0.471405"/>
+</kw>
+<kw name="Provide other inputs">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:53.786770" level="INFO">Selecting 'user' from radio button 'radio'.</msg>
+<arg>radio</arg>
+<arg>user</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-12-29T19:27:53.785770" elapsed="0.122812"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@id='okayBtn']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T19:27:53.909582" elapsed="0.249795"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:54.160506" level="INFO">Clicking button '//button[@id='okayBtn']'.</msg>
+<arg>//button[@id='okayBtn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.160506" elapsed="0.090959"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:54.252463" level="INFO">Selecting checkbox '//input[@type="checkbox" and @name="terms"]'.</msg>
+<arg>//input[@type="checkbox" and @name="terms"]</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.251465" elapsed="0.326221"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:53.785770" elapsed="0.791916"/>
+</kw>
+<kw name="Submit the form">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:54.580688" level="INFO">Clicking button 'css:#signInBtn'.</msg>
+<arg>css:#signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.580688" elapsed="0.093865"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:54.704812" level="INFO">${updated_value} = Signing ..</msg>
+<var>${updated_value}</var>
+<arg>css:#signInBtn</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.675555" elapsed="0.029257"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${updated_value}</arg>
+<arg>Signing ..</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.704812" elapsed="0.001000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T19:27:59.705861" level="INFO">Slept 5 seconds.</msg>
+<arg>${load_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T19:27:54.705812" elapsed="5.000049"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:54.578685" elapsed="5.128175"/>
+</kw>
+<kw name="Check if the page navigates to ProtoCommerce page">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:27:59.720052" level="INFO">Page title is 'ProtoCommerce'.</msg>
+<arg>ProtoCommerce</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-12-29T19:27:59.708861" elapsed="0.011191"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:59.707861" elapsed="0.012191"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T19:27:59.721850" elapsed="2.189715"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:27:48.936842" elapsed="12.975724"/>
+</test>
+<test id="s1-t5" name="[Tags]" line="29">
+<kw name="Positive Path">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-12-29T19:28:01.920594" level="INFO">Executing Test Cases for Positive path scenarios</msg>
+<arg>Executing Test Cases for Positive path scenarios</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-12-29T19:28:01.920594" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:01.919568" elapsed="0.001026"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T19:28:01.921567" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:01.918568" elapsed="0.003999"/>
+</test>
+<test id="s1-t6" name="Evaluate if we can able to fill the form using Automation" line="30">
+<kw name="Open DemoQAcom" owner="page_actions">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:01.929567" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>https://demoqa.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T19:28:01.928567" elapsed="34.238282"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:01.927567" elapsed="34.239282"/>
+</kw>
+<kw name="Navigate to web form section">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:36.173853" level="INFO">Clicking element '(//div[normalize-space()='Forms'])[1]'.</msg>
+<arg>(//div[normalize-space()='Forms'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:28:36.172851" elapsed="0.234889"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T19:28:41.409363" level="INFO">Slept 5 seconds.</msg>
+<arg>${load_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T19:28:36.407740" elapsed="5.001623"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:41.410495" level="INFO">Clicking element '//div[.//div[contains(text(),'Forms')]]//ul/li/*[contains(text(),'Practice Form')]'.</msg>
+<arg>//div[.//div[contains(text(),'${MENU}')]]//ul/li/*[contains(text(),'${SUBMENU}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.409363" elapsed="0.150072"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:36.171850" elapsed="5.387585"/>
+</kw>
+<kw name="Enter the form details">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:41.629710" level="INFO">${TITLE_HEADER} = Practice Form</msg>
+<var>${TITLE_HEADER}</var>
+<arg>//h1[contains(text(),'Practice Form')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.562436" elapsed="0.067274"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITLE_HEADER}</arg>
+<arg>Practice Form</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.629710" elapsed="0.001157"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:41.560435" elapsed="0.070432"/>
+</kw>
+<kw name="Submit the DemoQAcom form">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:41.635864" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.634866" elapsed="0.031123"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T19:28:41.667989" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<arg>//button[@id='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.666989" elapsed="0.168484"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:41.633865" elapsed="0.201608"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-29T19:28:41.836472" elapsed="2.623494"/>
+</kw>
+<status status="PASS" start="2024-12-29T19:28:01.926567" elapsed="42.534393"/>
+</test>
+<doc>Basic Web Scrapping using Robot framework</doc>
+<status status="PASS" start="2024-12-29T19:27:32.640273" elapsed="71.824689"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Demonstration">Test Demonstration</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="test basicWebScraping">test basicWebScraping</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-12-29T19:27:48.925841" level="WARN">Multiple tests with name '[Tags]' executed in suite 'test basicWebScraping'.</msg>
+<msg time="2024-12-29T19:28:01.916567" level="WARN">Multiple tests with name '[Tags]' executed in suite 'test basicWebScraping'.</msg>
 </errors>
 </robot>
