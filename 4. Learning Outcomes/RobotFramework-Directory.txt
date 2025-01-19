@@ -1,0 +1,53 @@
+project_root/
+│
+├── tests/                           # Directory for test suites
+│   ├── elements.robot               # Test cases for the Elements section
+│   ├── forms.robot                  # Test cases for the Forms section
+│   ├── widgets.robot                # Test cases for the Widgets section
+│   ├── alerts_frames.robot          # Test cases for Alerts, Frames, and Windows section
+│   ├── interactions.robot           # Test cases for Interactions section
+│   ├── books.robot                  # Test cases for Book Store section
+│   └── resources.robot              # Common test cases or shared logic
+│
+├── resources/                       # Directory for reusable resources
+│   ├── keywords.robot               # Custom reusable keywords
+│   ├── locators.robot               # Locators used across tests
+│   ├── validation.robot             # Reusable validation logic
+│   └── hooks.robot                  # Test setup and teardown logic
+│
+├── variables/                       # Directory for variables
+│   ├── variables.robot              # Global variables for the test suite
+│   ├── testdata.robot               # Test data for parameterized tests
+│
+├── screenshots/                     # Directory for storing screenshots
+│   ├── Elements/                    # Folder for test suite "Elements"
+│   │   ├── Verify Text Box Submission/
+│   │   │   ├── before_filling_form.png
+│   │   │   ├── after_filling_form.png
+│   │   │   └── after_submission.png
+│   ├── Forms/
+│   │   └── Submit Practice Form/
+│   │       └── form_filled.png
+│   └── Widgets/
+│       └── Interact With DatePicker/
+│           └── date_selected.png
+│
+├── reports/                         # Directory for test execution reports
+│   ├── log.html                     # Execution log (generated automatically)
+│   ├── report.html                  # Test report (generated automatically)
+│   └── output.xml                   # Test output file (generated automatically)
+│
+├── drivers/                         # Directory for web drivers
+│   └── chromedriver.exe             # Web driver for Chrome (or other browsers)
+│
+├── configs/                         # Configurations for test execution
+│   └── browser_config.yaml          # Config for browser options (if needed)
+│
+├── robot.yaml                       # Configuration file for Robot Framework (optional)
+├── requirements.txt                 # Python dependencies (if any)
+└── README.md                        # Project documentation
+
+
+I want to test all the UI interactions on the below websites
+https://demoqa.com/
+

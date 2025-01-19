@@ -1,6 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    XML
+Library    Collections
 Documentation    Basic Web Scrapping using Robot framework
 Test Teardown    Close Browser
 Resource         page_actions.robot
@@ -8,7 +9,7 @@ Resource         page_actions.robot
 *** Variables ***
 ${DemoQA_MENU}       Forms
 ${DemoQA_SUBMENU}    Practice Form
-${load_time}    5
+${load_time}    2
 ${loginpage_username}    rahulshettyacademy
 ${loginpage_password}    learning
 
@@ -74,7 +75,13 @@ Navigate to web form section
 
 Enter the form details
     ${TITLE_HEADER}=    Get Text    //h1[contains(text(),'Practice Form')]
+    ${gender}=    
     Should Be Equal    ${TITLE_HEADER}    Practice Form
+    Input Text    css:#firstname    Anna
+    Input Text    css:#lastname    Choudry
+    Input Text    css:#userEmail    anna.chodry@gmail.com
+    Select Checkbox    //div[@class='custom-control custom-radio custom-control-inline']/input[@value='${gender}']
+
 
 
 Submit the DemoQAcom form

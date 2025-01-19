@@ -1,37 +1,36 @@
-<root>
-    <html>
-        <head>
-            <title>Sample XML Document</title>
-        </head>
-        <body>
-            <div id="content" class="main">
-                <p>First paragraph</p>
-                <p>Second paragraph</p>
-                <div>
-                    <span class="highlight">Highlighted text</span>
-                </div>
-                <div>
-                    <a href="http://example.com">Example Link</a>
-                </div>
-            </div>
-            <ul id="list">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-            </ul>
-            <form id="form1">
-                <input type="text" name="username" value="User1"/>
-                <input type="password" name="password"/>
-                <input type="hidden" name="token" value="12345"/>
-            </form>
-            <h2 id="section1">Section 1</h2>
-            <p>Content under Section 1</p>
-            <h2 id="section2">Section 2</h2>
-            <p>Content under Section 2</p>
-            <div class="container">
-                <p>Child paragraph 1</p>
-                <p>Child paragraph 2</p>
-            </div>
-        </body>
-    </html>
-</root>
+<library>
+    <books>
+        <book id="1" category="fiction">
+            <title lang="en">The Great Gatsby</title>
+            <author>F. Scott Fitzgerald</author>
+            <year>1925</year>
+            <price currency="USD">10.99</price>
+        </book>
+        <book id="2" category="non-fiction">
+            <title lang="en">Sapiens: A Brief History of Humankind</title>
+            <author>Yuval Noah Harari</author>
+            <year>2011</year>
+            <price currency="USD">18.99</price>
+        </book>
+        <book id="3" category="fiction">
+            <title lang="fr">Le Petit Prince</title>
+            <author>Antoine de Saint-Exupéry</author>
+            <year>1943</year>
+            <price currency="EUR">7.99</price>
+        </book>
+    </books>
+    <magazines>
+        <magazine id="1" frequency="monthly">
+            <title>National Geographic</title>
+            <publisher>National Geographic Society</publisher>
+            <year>2025</year>
+            <price currency="USD">5.99</price>
+        </magazine>
+        <magazine id="2" frequency="weekly">
+            <title>The New Yorker</title>
+            <publisher>Condé Nast</publisher>
+            <year>2025</year>
+            <price currency="USD">6.99</price>
+        </magazine>
+    </magazines>
+</library>
