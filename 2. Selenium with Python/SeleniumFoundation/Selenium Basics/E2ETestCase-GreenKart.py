@@ -26,10 +26,10 @@ def searchAnalysis(wordlist, search):
     result = True
     for word in wordlist:
         if search in word.text:
-            result = result & True
+            break
             # print("The Item Name: " + word.text + " has characters '" + search+"'")
         else:
-            result = result & False
+            result = False
             # print("The Item Name: " + word.text + " does not have " + search)
     return result
 
